@@ -5,7 +5,6 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     private PlayerManager m_playerManager;
-    private Vector2 m_movement;
 
     private void Start()
     {
@@ -14,12 +13,12 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        m_movement.x = Input.GetAxisRaw("Horizontal");
-        m_movement.y = Input.GetAxisRaw("Vertical");
+        m_playerManager.movement.x = Input.GetAxisRaw("Horizontal");
+        m_playerManager.movement.y = Input.GetAxisRaw("Vertical");
     }
 
     private void FixedUpdate()
     {
-        m_playerManager.rb.MovePosition(m_playerManager.rb.position + m_movement * m_playerManager.speed * Time.fixedDeltaTime);
+        m_playerManager.rb.MovePosition(m_playerManager.rb.position + m_playerManager.movement * m_playerManager.speed * Time.fixedDeltaTime);
     }
 }

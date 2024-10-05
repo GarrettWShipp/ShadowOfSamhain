@@ -6,7 +6,10 @@ public class PlayerManager : MonoBehaviour
 {
     public float speed;
     public float damage;
-    public Rigidbody2D rb;
+    public GameObject littleguy;
+    [HideInInspector] public Rigidbody2D rb;
+    [HideInInspector] public Vector2 movement;
+
 
     private void Start()
     {
