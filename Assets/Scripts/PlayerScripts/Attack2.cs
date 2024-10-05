@@ -15,6 +15,19 @@ public class Attack2 : Attack
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(attackKey) && Time.time >= attackNext)
+        {
+            attackNext = Time.time + attackCooldown;
+            attackAnim.SetTrigger("Attack2");
+            OnAttackSquare();
+        }
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        if (attackPoint == null)
+            return;
+
+        Gizmos.DrawWireCube(attackPoint.position, squareAttackRange);
     }
 }

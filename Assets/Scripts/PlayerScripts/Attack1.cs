@@ -19,7 +19,7 @@ public class Attack1 : Attack
         {
             attackNext = Time.time + attackCooldown;
             attackAnim.SetTrigger("Attack1");
-            OnAttack();
+            OnAttackCircle();
         }
     }
 
@@ -28,6 +28,6 @@ public class Attack1 : Attack
         if (attackPoint == null)
             return;
 
-        Gizmos.DrawWireSphere(attackPoint.position, attackRange);
+        Gizmos.DrawWireSphere(attackPoint.position, circleAttackRange);
     }
 }

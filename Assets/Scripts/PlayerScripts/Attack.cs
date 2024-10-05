@@ -12,7 +12,8 @@ public abstract class Attack : MonoBehaviour
     public LayerMask enemyLayers;
     public float attackCooldown;
     public int attackDmg;
-    public float attackRange;
+    public float circleAttackRange;
+    public Vector2 squareAttackRange;
     public Animator attackAnim;
     [HideInInspector] public float attackNext;
 
@@ -28,9 +29,19 @@ public abstract class Attack : MonoBehaviour
        
         
     }
-    public void OnAttack()
+    public void OnAttackCircle()
     {
-        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, circleAttackRange, enemyLayers);
+
+        foreach (Collider2D enemy in hitEnemies)
+        {
+            enemy.GetComponent<Health>().Damage(attackDmg);
+        }
+    }
+    public void OnAttackSquare()
+    {
+
+        Collider2D[] hitEnemies = Physics2D.OverlapBoxAll(attackPoint.position, squareAttackRange, enemyLayers);
 
         foreach (Collider2D enemy in hitEnemies)
         {
