@@ -6,15 +6,10 @@ public class PlayerManager : MonoBehaviour
 {
     public float speed;
     public float damage;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public Rigidbody2D rb;
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        
+        rb = GetComponent<Rigidbody2D>();
     }
 }
