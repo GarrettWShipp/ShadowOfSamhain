@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
+  - Spawn Point
+  - Fire
+  - Ice
+  - player
   layers:
   - Default
   - TransparentFX
