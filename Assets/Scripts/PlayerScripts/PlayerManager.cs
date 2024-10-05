@@ -8,6 +8,10 @@ public class PlayerManager : MonoBehaviour
 {
     public float speed;
     public GameObject littleguy;
+    public Animator anim;
+
+    //public LayerMask enemyLayers;
+
     [HideInInspector] public Rigidbody2D rb;
     [HideInInspector] public Vector2 movement;
 
@@ -15,5 +19,6 @@ public class PlayerManager : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
     }
 }
