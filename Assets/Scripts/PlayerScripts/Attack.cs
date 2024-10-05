@@ -16,36 +16,46 @@ public class Attack : MonoBehaviour
     {
         if(m_playerManager.movement == new Vector2 (1f,0f))
         {
-            m_playerManager.littleguy.transform.localPosition = new Vector2(1.5f, 0f);
+            m_playerManager.littleguy.transform.localPosition = new Vector2(1f, 0f);
         }
         if (m_playerManager.movement == new Vector2(0f, 1f))
         {
-            m_playerManager.littleguy.transform.localPosition = new Vector2(0f, 2f);
+            m_playerManager.littleguy.transform.localPosition = new Vector2(0f, 1f);
         }
         if (m_playerManager.movement == new Vector2(-1f, 0f))
         {
-            m_playerManager.littleguy.transform.localPosition = new Vector2(-1.5f, 0f);
+            m_playerManager.littleguy.transform.localPosition = new Vector2(-1f, 0f);
         }
         if (m_playerManager.movement == new Vector2(0f, -1f))
         {
-            m_playerManager.littleguy.transform.localPosition = new Vector2(0f, -2f);
+            m_playerManager.littleguy.transform.localPosition = new Vector2(0f, -1.5f);
         }
 
         if (m_playerManager.movement == new Vector2(1f, 1f))
         {
-            m_playerManager.littleguy.transform.localPosition = new Vector2(1.5f, 1.5f);
+            m_playerManager.littleguy.transform.localPosition = new Vector2(1f, 1f);
         }
         if (m_playerManager.movement == new Vector2(-1f, -1f))
         {
-            m_playerManager.littleguy.transform.localPosition = new Vector2(-1.5f, -1.5f);
+            m_playerManager.littleguy.transform.localPosition = new Vector2(-1f, -1f);
         }
         if (m_playerManager.movement == new Vector2(-1f, 1f))
         {
-            m_playerManager.littleguy.transform.localPosition = new Vector2(-1.5f, 1.5f);
+            m_playerManager.littleguy.transform.localPosition = new Vector2(-1f, 1f);
         }
         if (m_playerManager.movement == new Vector2(1f, -1f))
         {
-            m_playerManager.littleguy.transform.localPosition = new Vector2(1.5f, -1.5f);
+            m_playerManager.littleguy.transform.localPosition = new Vector2(1f, -1f);
         }
+
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            AttackOne();
+        }
+    }
+
+    void AttackOne()
+    {
+
     }
 }
