@@ -8,6 +8,7 @@ TagManager:
   - Spawn Point
   - Fire
   - Ice
+  - player
   layers:
   - Default
   - TransparentFX
