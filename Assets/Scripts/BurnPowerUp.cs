@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using SuperPupSystems.Helper;
 
 public class BurnPowerUp : MonoBehaviour
 {
     public float burnDuration = 5f;      // Duration of the burning effect
     public float burnDamagePerSecond = 10f;
+
+    public Health health;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -14,8 +17,13 @@ public class BurnPowerUp : MonoBehaviour
             // Apply burn effect to enemies
             ApplyBurnToEnemies();
 
+            health.Heal(1); 
+
             // Destroy the power-up after use
             Destroy(gameObject);
+
+           
+
         }
     }
 

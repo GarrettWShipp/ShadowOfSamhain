@@ -5,11 +5,11 @@ using UnityEngine;
 public class BurningEffect : MonoBehaviour
 {
     public float burnDuration = 5f;      // Duration of the burning effect
-    public float damagePerSecond = 10f;  // How much damage per second
+    public float damagePerSecond = 1f;  // How much damage per second
     private float burnTimer = 0f;
     private bool isBurning = false;
 
-    //private EnemyHealth enemyHealth;     // Assume the enemy has a health script
+    //private Health enemyHealth;     // Assume the enemy has a health script
 
     private void Start()
     {
