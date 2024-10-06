@@ -95,12 +95,15 @@ public class EnemyAI : MonoBehaviour
 
 
             
-        }
+    }
         void OnTriggerEnter2D(Collider2D col)
         {
             if (col.gameObject.tag == "Player")
             {
                 col.gameObject.GetComponent<Health>().Damage(1);
-            }
+                col.gameObject.GetComponent<PlayerManager>().webPower = false;
+                col.gameObject.GetComponent<PlayerManager>().firePower = false;
+
+            }   
         }
-    }
+}
