@@ -35,19 +35,16 @@ public class PlayerManager : MonoBehaviour
 
     private void Update()
     {
-        if (firePower)
+        if (firePower == true)
         {
-            m_sprite.color = new Color(255, 56, 0);
+            m_sprite.color = new Color(106, 0, 166);
         }
-        else
-        {
-            m_sprite.color = new Color(255, 255, 255);
-        }
+
         if (webPower)
         {
             m_sprite.color = new Color(0, 255, 255);
         }
-        else
+        if(webPower ==  false && firePower == false) 
         {
             m_sprite.color = new Color(255, 255, 255);
         }

@@ -12,6 +12,7 @@ TagManager:
   - Spawn Point
   - Rooms
   - Templates
+  - Doors
   layers:
   - Default
   - TransparentFX

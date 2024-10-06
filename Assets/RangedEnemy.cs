@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using Pathfinding;
 using SuperPupSystems.Helper;
-using TMPro;
 
-public class RangedEnemyAI : MonoBehaviour
+public class RangedEnemy : MonoBehaviour
 {
 
     public Transform target;
@@ -22,7 +21,9 @@ public class RangedEnemyAI : MonoBehaviour
     public Health health;
     public bool webbed = false;
     public bool onFire = false;
-    public SpriteRenderer sprite;
+    public float distanceToShoot = 5f;
+    public float distanceToStop = 3f;
+    public GameObject bullet;
     
 
     // Start is called before the first frame update
@@ -55,7 +56,6 @@ public class RangedEnemyAI : MonoBehaviour
         if (webbed)
         {
             speed = webbedSpeed;
-            sprite.color = new Color(0, 79, 255);
         }
         else
             speed = maxSpeed;
@@ -79,9 +79,13 @@ public class RangedEnemyAI : MonoBehaviour
         Vector2 direction = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
         Vector2 force = direction * speed * Time.deltaTime;
 
-
-        rb.AddForce(force);
-
+        if (Vector2.Distance(target.position, transform.position) >= distanceToStop)
+        {
+            rb.AddForce(force);
+        } else
+        {
+            rb.AddForce(force * -1);
+        }
 
         float distance = Vector2.Distance(rb.position, path.vectorPath[currentWaypoint]);
         if (distance < waypointDistance)
@@ -111,9 +115,4 @@ public class RangedEnemyAI : MonoBehaviour
 
             }   
         }
-    public void Death()
-    {
-        Destroy(this.gameObject);
-
-    }
 }
