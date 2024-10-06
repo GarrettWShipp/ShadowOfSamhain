@@ -6,7 +6,8 @@ using UnityEngine;
 
 public class PlayerManager : MonoBehaviour
 {
-    public float speed;
+    public float maxSpeed;
+    [HideInInspector] public float speed;
     public GameObject littleguy;
     public Animator anim;
 

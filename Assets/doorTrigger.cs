@@ -28,4 +28,8 @@ public class doorTrigger : MonoBehaviour
     {
         Destroy(this.gameObject);
     }
+    public void TimeScale()
+    {
+        Time.timeScale = 0f;
+    }
 }
