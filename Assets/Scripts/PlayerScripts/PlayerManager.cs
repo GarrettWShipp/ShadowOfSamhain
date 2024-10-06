@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class PlayerManager : MonoBehaviour
 {
+    
     public float maxSpeed;
     [HideInInspector] public float speed;
     public GameObject littleguy;
@@ -49,5 +50,12 @@ public class PlayerManager : MonoBehaviour
         {
             m_sprite.color = new Color(255, 255, 255);
         }
+    }
+
+
+    public void StopOnDeath()
+    {
+        gameObject.GetComponent<PlayerManager>().enabled = false;
+        gameObject.GetComponent<PlayerMovement>().enabled = false;
     }
 }
