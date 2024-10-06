@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Pathfinding;
 using SuperPupSystems.Helper;
+using TMPro;
 
 public class EnemyAI : MonoBehaviour
 {
@@ -21,6 +22,7 @@ public class EnemyAI : MonoBehaviour
     public Health health;
     public bool webbed = false;
     public bool onFire = false;
+    public SpriteRenderer sprite;
     
 
     // Start is called before the first frame update
@@ -53,6 +55,7 @@ public class EnemyAI : MonoBehaviour
         if (webbed)
         {
             speed = webbedSpeed;
+            sprite.color = new Color(0, 79, 255);
         }
         else
             speed = maxSpeed;

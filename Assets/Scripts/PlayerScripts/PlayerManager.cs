@@ -18,15 +18,38 @@ public class PlayerManager : MonoBehaviour
     [HideInInspector] public Vector2 movement;
     [HideInInspector] public Health health;
 
+    private SpriteRenderer m_sprite;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         health = GetComponent<Health>();
+        m_sprite = GetComponent<SpriteRenderer>();
         
     }
     private void Start()
     {
         health.currentHealth = 1;
+    }
+
+    private void Update()
+    {
+        if (firePower)
+        {
+            m_sprite.color = new Color(255, 56, 0);
+        }
+        else
+        {
+            m_sprite.color = new Color(255, 255, 255);
+        }
+        if (webPower)
+        {
+            m_sprite.color = new Color(0, 255, 255);
+        }
+        else
+        {
+            m_sprite.color = new Color(255, 255, 255);
+        }
     }
 }
