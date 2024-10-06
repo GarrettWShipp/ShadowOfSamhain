@@ -6,7 +6,9 @@ using UnityEngine;
 
 public class PlayerManager : MonoBehaviour
 {
-    public float speed;
+    
+    public float maxSpeed;
+    [HideInInspector] public float speed;
     public GameObject littleguy;
     public Animator anim;
 
@@ -37,7 +39,7 @@ public class PlayerManager : MonoBehaviour
     {
         if (firePower == true)
         {
-            m_sprite.color = new Color(106, 0, 166);
+            m_sprite.color = new Color(200, 0, 166);
         }
 
         if (webPower)
@@ -48,5 +50,12 @@ public class PlayerManager : MonoBehaviour
         {
             m_sprite.color = new Color(255, 255, 255);
         }
+    }
+
+
+    public void StopOnDeath()
+    {
+        gameObject.GetComponent<PlayerManager>().enabled = false;
+        gameObject.GetComponent<PlayerMovement>().enabled = false;
     }
 }

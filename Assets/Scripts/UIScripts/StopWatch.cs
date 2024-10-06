@@ -29,4 +29,9 @@ public class StopWatch : MonoBehaviour
         timerText.text = "Time: "+ time.Minutes.ToString()+ ":"+ time.Seconds.ToString() + ":" + time.Milliseconds.ToString();
         finalTime.text = "Final Time: " + time.Minutes.ToString() + ":" + time.Seconds.ToString() + ":"+ time.Milliseconds.ToString();
     }
+
+    public void stop()
+    {
+        timerActive = false;
+    }
 }

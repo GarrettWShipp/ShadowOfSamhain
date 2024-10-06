@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
+using UnityEngine.Audio;
 
 public abstract class Attack : MonoBehaviour
 {
@@ -19,6 +20,8 @@ public abstract class Attack : MonoBehaviour
     public string animTrigger;
     [HideInInspector] public float attackNext;
     private float m_angle;
+
+    public AudioSource attackSound;
 
     private void Awake()
     {
@@ -41,6 +44,7 @@ public abstract class Attack : MonoBehaviour
         {
             attackNext = Time.time + attackCooldown;
             attackAnim.SetTrigger(animTrigger);
+            attackSound.Play();
 
             Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, circleAttackRange, enemyLayers);
 
@@ -65,6 +69,7 @@ public abstract class Attack : MonoBehaviour
             attackNext = Time.time + attackCooldown;
             attackAnim.SetTrigger(animTrigger);
             Collider2D[] hitEnemies = Physics2D.OverlapBoxAll(attackPoint.position, squareAttackRange, m_angle, enemyLayers);
+            attackSound.Play();
 
             foreach (Collider2D enemy in hitEnemies)
             {
