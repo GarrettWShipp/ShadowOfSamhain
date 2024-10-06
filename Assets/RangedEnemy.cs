@@ -24,6 +24,7 @@ public class RangedEnemy : MonoBehaviour
     public float distanceToShoot = 5f;
     public float distanceToStop = 3f;
     public GameObject bullet;
+    public Transform fireballPoint;
     
 
     // Start is called before the first frame update
@@ -35,6 +36,7 @@ public class RangedEnemy : MonoBehaviour
         webbedSpeed = maxSpeed * .5f;
 
         InvokeRepeating("UpdatePath", 0f, .25f);
+        InvokeRepeating("Shoot", 2f, 2f);
         
     }
 
@@ -42,6 +44,10 @@ public class RangedEnemy : MonoBehaviour
     {
         if (seeker.IsDone())
             seeker.StartPath(rb.position, target.position, OnPathComplete);
+    }
+    void Shoot()
+    {
+        Instantiate(bullet, fireballPoint.position, fireballPoint.rotation);
     }
     void OnPathComplete(Path p)
     {
