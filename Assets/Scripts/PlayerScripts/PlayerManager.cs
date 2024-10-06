@@ -14,11 +14,17 @@ public class PlayerManager : MonoBehaviour
 
     [HideInInspector] public Rigidbody2D rb;
     [HideInInspector] public Vector2 movement;
+    [HideInInspector] public Health health;
 
-
-    private void Start()
+    private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        health = GetComponent<Health>();
+        
+    }
+    private void Start()
+    {
+        health.currentHealth = 1;
     }
 }
