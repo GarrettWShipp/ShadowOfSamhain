@@ -5,7 +5,7 @@ using Pathfinding;
 using SuperPupSystems.Helper;
 using TMPro;
 
-public class RangedEnemyAI : MonoBehaviour
+public class EnemyAI : MonoBehaviour
 {
 
     public Transform target;
