@@ -9,6 +9,9 @@ TagManager:
   - Fire
   - Ice
   - player
+  - Spawn Point
+  - Rooms
+  - Templates
   layers:
   - Default
   - TransparentFX
