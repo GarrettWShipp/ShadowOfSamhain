@@ -1,21 +1,21 @@
-using SuperPupSystems.Helper;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Attack2 : Attack
+public class Attack4 : Attack
 {
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-            OnAttackSquare();
+        OnAttackCircle();
+        
     }
 
     private void OnDrawGizmosSelected()
@@ -23,6 +23,6 @@ public class Attack2 : Attack
         if (attackPoint == null)
             return;
 
-        Gizmos.DrawWireCube(attackPoint.position, squareAttackRange);
+        Gizmos.DrawWireSphere(attackPoint.position, circleAttackRange);
     }
 }

@@ -16,6 +16,8 @@ public class PlayerMovement : MonoBehaviour
         m_playerManager.movement.x = Input.GetAxisRaw("Horizontal");
         m_playerManager.movement.y = Input.GetAxisRaw("Vertical");
 
+        m_playerManager.anim.SetFloat("Movement", m_playerManager.movement.x);
+
         if (m_playerManager.movement == new Vector2(1f, 0f))
         {
             m_playerManager.littleguy.GetComponent<SpriteRenderer>().flipY = false;

@@ -1,9 +1,8 @@
-using SuperPupSystems.Helper;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Attack1 : Attack
+public class Attack3 : Attack
 {
 
     // Start is called before the first frame update
@@ -15,8 +14,8 @@ public class Attack1 : Attack
     // Update is called once per frame
     void Update()
     {
-            OnAttackCircle();
+        
+        OnAttackCircle();
     }
 
-   
 }

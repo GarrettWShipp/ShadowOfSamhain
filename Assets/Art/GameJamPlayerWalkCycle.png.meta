@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8c3203abc929ddc43adc7aaf23af1184
+guid: 4fb10b6a8e0173740a371acad7cb3594
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 20
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -110,211 +110,127 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: GameJamAttack2_0
+      name: GameJamPlayerWalkCycle_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 298
-        width: 13
-        height: 13
+        y: 160
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1a7fb4478c5003640970597825971821
-      internalID: 841406639
+      spriteID: b8bf6c29a52072b419fefd4d7fbaa1aa
+      internalID: 106462519
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GameJamAttack2_1
+      name: GameJamPlayerWalkCycle_1
       rect:
         serializedVersion: 2
         x: 0
-        y: 266
-        width: 21
-        height: 13
-      alignment: 9
-      pivot: {x: 0.3084946, y: 0.4837177}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3866a2226f56b154a9dec0362b5e386c
-      internalID: -35754007
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GameJamAttack2_2
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 234
-        width: 40
-        height: 13
-      alignment: 9
-      pivot: {x: 0.17192283, y: 0.46743658}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b1e2101bcc0fe8a47a11c805c23bf655
-      internalID: 336743612
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GameJamAttack2_3
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 201
-        width: 61
-        height: 15
-      alignment: 9
-      pivot: {x: 0.1225079, y: 0.468986}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 077e0a1f07a1a91489fdf8e39c9b0d46
-      internalID: -13959759
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GameJamAttack2_4
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 164
-        width: 64
-        height: 25
-      alignment: 9
-      pivot: {x: 0.114762746, y: 0.4906958}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: aac1a2ec1be77734eb9e9bdf7fc54c00
-      internalID: -149633470
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GameJamAttack2_5
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 132
-        width: 64
-        height: 25
-      alignment: 9
-      pivot: {x: 0.11839706, y: 0.4906958}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4a8b34e05e2019f4f92899d23da15cdd
-      internalID: 1217738921
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GameJamAttack2_6
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 99
-        width: 61
-        height: 23
-      alignment: 9
-      pivot: {x: 0.12632094, y: 0.54045105}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0d1d01f3de8f95b40be2f3da6f1e28b8
-      internalID: 985787683
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GameJamAttack2_7
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 74
-        width: 39
-        height: 13
-      alignment: 9
-      pivot: {x: 0.20180003, y: 0.4999994}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 891af70bbd1e4d3488117763e2011058
-      internalID: -139990419
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GameJamAttack2_8
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 42
-        width: 25
-        height: 13
-      alignment: 9
-      pivot: {x: 0.25810027, y: 0.48210818}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 58d330e8f87035040966f0c62daa59d6
-      internalID: -393174148
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GameJamAttack2_9
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 10
-        width: 13
-        height: 13
+        y: 128
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b21443a048dc20e41a4207b8090a2c84
-      internalID: 1055935782
+      spriteID: b0b4f1b5e8d88844bbc431ea0920a12a
+      internalID: -816574034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameJamPlayerWalkCycle_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66db2560b9714da4a84c098645a384e4
+      internalID: 1860640043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameJamPlayerWalkCycle_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 093dc6335dd15404986b9e757d058cec
+      internalID: 897218047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameJamPlayerWalkCycle_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 590ebe0a2d94ae249a300a4b041b4221
+      internalID: -380974282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameJamPlayerWalkCycle_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f532982c6e3b83439df19fd91cc86ff
+      internalID: 1621425578
       vertices: []
       indices: 
       edges: []
@@ -330,16 +246,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      GameJamAttack2_0: 841406639
-      GameJamAttack2_1: -35754007
-      GameJamAttack2_2: 336743612
-      GameJamAttack2_3: -13959759
-      GameJamAttack2_4: -149633470
-      GameJamAttack2_5: 1217738921
-      GameJamAttack2_6: 985787683
-      GameJamAttack2_7: -139990419
-      GameJamAttack2_8: -393174148
-      GameJamAttack2_9: 1055935782
+      GameJamPlayerWalkCycle_0: 106462519
+      GameJamPlayerWalkCycle_1: -816574034
+      GameJamPlayerWalkCycle_2: 1860640043
+      GameJamPlayerWalkCycle_3: 897218047
+      GameJamPlayerWalkCycle_4: -380974282
+      GameJamPlayerWalkCycle_5: 1621425578
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
