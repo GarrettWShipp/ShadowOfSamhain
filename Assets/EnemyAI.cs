@@ -25,7 +25,7 @@ public class EnemyAI : MonoBehaviour
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
 
-        InvokeRepeating("UpdatePath", 0f, .5f);
+        InvokeRepeating("UpdatePath", 0f, .25f);
         
     }
 
@@ -83,7 +83,7 @@ public class EnemyAI : MonoBehaviour
         }
         void OnTriggerEnter2D(Collider2D col)
         {
-            if (col.gameObject.tag == "player")
+            if (col.gameObject.tag == "Player")
             {
                 col.gameObject.GetComponent<Health>().Damage(1);
             }
