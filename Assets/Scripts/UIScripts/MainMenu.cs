@@ -4,7 +4,6 @@ using UnityEngine;
 using TMPro;
 using UnityEditor;
 using UnityEngine.SceneManagement;
-using UnityEditor.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
 
@@ -19,7 +18,7 @@ public class MainMenu : MonoBehaviour
     public  void Quit()
     {
         Application.Quit();
-        EditorApplication.ExitPlaymode();
+        //EditorApplication.ExitPlaymode();
     }
 }
 
