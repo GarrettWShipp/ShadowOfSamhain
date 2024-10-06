@@ -7,6 +7,7 @@ public class PauseMenu : MonoBehaviour
 {
     public GameObject pauseMenu;
     public bool isPaused = false;
+    public GameObject deathMenu;
 
     void Start()
     {
@@ -43,6 +44,8 @@ public class PauseMenu : MonoBehaviour
     }
 
 
+
+   
     public void QuitMainMenu()
     {
         SceneManager.LoadScene(0);
