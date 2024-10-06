@@ -28,7 +28,7 @@ public class TempMovement : MonoBehaviour
     {
         if (horizontal != 0 && vertical != 0) // Check for diagonal movement
         {
-            // limit movement speed diagonally, so you move at 70% speed
+            // limit movement maxSpeed diagonally, so you move at 70% maxSpeed
             horizontal *= moveLimiter;
             vertical *= moveLimiter;
         }

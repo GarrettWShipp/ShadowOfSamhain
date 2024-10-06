@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
-    public float originalSpeed = 5f;   // Original speed of the enemy
-    public float slowedSpeed = 2f;     // Reduced speed when slowed
+    public float originalSpeed = 5f;   // Original maxSpeed of the enemy
+    public float slowedSpeed = 2f;     // Reduced maxSpeed when slowed
     private float currentSpeed;
     private bool isSlowed = false;
     private float slowDuration = 3f;   // Time the slowdown effect lasts

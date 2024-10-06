@@ -573,6 +573,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2b3797959a2afb41af8c1c1663c4229, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  text: {fileID: 0}
 --- !u!114 &1289537922 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8949845128612509078, guid: edc4637eb716cc040a0b94a00ab806d3, type: 3}
@@ -1507,10 +1508,6 @@ PrefabInstance:
       propertyPath: attack
       value: 
       objectReference: {fileID: 1747600260}
-    - target: {fileID: 3057476236393956061, guid: 457bbe890d8ca884a9b0550f02aec99a, type: 3}
-      propertyPath: attack
-      value: 
-      objectReference: {fileID: 1747600270}
     - target: {fileID: 3718160423063018637, guid: 457bbe890d8ca884a9b0550f02aec99a, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -1520,18 +1517,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3864595602441715009, guid: 457bbe890d8ca884a9b0550f02aec99a, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4622812234521572363, guid: 457bbe890d8ca884a9b0550f02aec99a, type: 3}
-      propertyPath: attack
-      value: 
-      objectReference: {fileID: 1289537922}
-    - target: {fileID: 6927821026380715912, guid: 457bbe890d8ca884a9b0550f02aec99a, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6927821026380715912, guid: 457bbe890d8ca884a9b0550f02aec99a, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
@@ -1635,22 +1620,6 @@ PrefabInstance:
       propertyPath: attack
       value: 
       objectReference: {fileID: 1747600270}
-    - target: {fileID: 8300433942159782532, guid: 457bbe890d8ca884a9b0550f02aec99a, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8300433942159782532, guid: 457bbe890d8ca884a9b0550f02aec99a, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8300433942159782532, guid: 457bbe890d8ca884a9b0550f02aec99a, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8348622024044724329, guid: 457bbe890d8ca884a9b0550f02aec99a, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
