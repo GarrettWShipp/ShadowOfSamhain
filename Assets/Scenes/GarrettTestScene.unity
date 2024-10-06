@@ -162,6 +162,7 @@ MonoBehaviour:
   circleAttackRange: 0
   squareAttackRange: {x: 0, y: 0}
   attackAnim: {fileID: 0}
+  animTrigger: 
   attackNext: 0
 --- !u!4 &646786594
 Transform:
