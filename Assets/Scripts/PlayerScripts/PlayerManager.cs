@@ -37,7 +37,7 @@ public class PlayerManager : MonoBehaviour
     {
         if (firePower == true)
         {
-            m_sprite.color = new Color(106, 0, 166);
+            m_sprite.color = new Color(200, 0, 166);
         }
 
         if (webPower)
