@@ -20,10 +20,14 @@ public abstract class Attack : MonoBehaviour
     [HideInInspector] public float attackNext;
     private float m_angle;
 
+    private void Awake()
+    {
+         m_playerManager = GetComponent<PlayerManager>();
+    }
     // Start is called before the first frame update
     void Start()
     {
-        m_playerManager = GetComponent<PlayerManager>();
+       
     }
 
     // Update is called once per frame
@@ -43,6 +47,13 @@ public abstract class Attack : MonoBehaviour
             foreach (Collider2D enemy in hitEnemies)
             {
                 enemy.GetComponent<Health>().Damage(attackDmg);
+                if (m_playerManager.webPower == true)
+                {
+                    Debug.Log("Webbed");
+                    enemy.GetComponent<EnemyAI>().webbed = true;
+                }
+                if(m_playerManager.firePower == true)
+                    enemy.GetComponent<Health>().Damage(attackDmg);
             }
         }
     }
@@ -58,7 +69,15 @@ public abstract class Attack : MonoBehaviour
             foreach (Collider2D enemy in hitEnemies)
             {
                 enemy.GetComponent<Health>().Damage(attackDmg);
+                if (m_playerManager.webPower == true)
+                {
+                    Debug.Log("Webbed");
+                    enemy.GetComponent<EnemyAI>().webbed = true;
+                }
+                    
             }
         }
     }
+
+    
 }

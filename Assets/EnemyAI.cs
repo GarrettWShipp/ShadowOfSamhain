@@ -8,7 +8,9 @@ public class EnemyAI : MonoBehaviour
 {
 
     public Transform target;
-    public float speed = 200f;
+    public float maxSpeed = 200f;
+    private float speed;
+    private float webbedSpeed;
     public float waypointDistance = 3f;
     Path path;
     int currentWaypoint = 0;
@@ -17,6 +19,8 @@ public class EnemyAI : MonoBehaviour
     Rigidbody2D rb;
     bool reachedEndOfPath = false;
     public Health health;
+    public bool webbed = false;
+    public bool onFire = false;
     
 
     // Start is called before the first frame update
@@ -24,6 +28,8 @@ public class EnemyAI : MonoBehaviour
     {
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
+        speed = maxSpeed;
+        webbedSpeed = maxSpeed * .5f;
 
         InvokeRepeating("UpdatePath", 0f, .25f);
         
@@ -41,6 +47,15 @@ public class EnemyAI : MonoBehaviour
             path = p;
             currentWaypoint = 0; 
         }
+    }
+    private void Update()
+    {
+        if (webbed)
+        {
+            speed = webbedSpeed;
+        }
+        else
+            speed = maxSpeed;
     }
 
     // Update is called once per frame

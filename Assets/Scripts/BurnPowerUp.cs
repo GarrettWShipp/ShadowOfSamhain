@@ -9,14 +9,28 @@ public class BurnPowerUp : MonoBehaviour
     public float burnDamagePerSecond = 10f;
 
     public Health health;
+    private PlayerManager m_player;
+
+    private void Awake()
+    {
+        m_player = GetComponent<PlayerManager>();
+    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))  // Check if the player picks up the power-up
         {
-            // Apply burn effect to enemies
-            ApplyBurnToEnemies();
+            m_player = other.GetComponent<PlayerManager>();
 
+            if (m_player.webPower == false)
+            {
+                m_player.firePower = true;
+            }
+            else
+            {
+                m_player.webPower = false;
+                m_player.firePower = true;
+            }
             health.Heal(1); 
 
             // Destroy the power-up after use

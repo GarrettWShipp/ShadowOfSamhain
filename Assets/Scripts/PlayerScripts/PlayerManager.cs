@@ -10,7 +10,9 @@ public class PlayerManager : MonoBehaviour
     public GameObject littleguy;
     public Animator anim;
 
-    //public LayerMask enemyLayers;
+    public bool webPower;
+
+    public bool firePower;
 
     [HideInInspector] public Rigidbody2D rb;
     [HideInInspector] public Vector2 movement;
