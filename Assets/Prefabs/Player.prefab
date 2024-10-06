@@ -315,6 +315,7 @@ MonoBehaviour:
   anim: {fileID: 868994135983888028}
   rb: {fileID: 0}
   movement: {x: 0, y: 0}
+  health: {fileID: 0}
 --- !u!114 &523222503660692420
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -468,20 +469,44 @@ MonoBehaviour:
   outOfHealth:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: DeathMenu, Assembly-CSharp
-        m_MethodName: DeathScreen
-        m_Mode: 1
+      - m_Target: {fileID: 868994135983888028}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: SetTrigger
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Death
           m_BoolArgument: 0
         m_CallState: 2
-  maxHealth: 100
-  currentHealth: 0
+      - m_Target: {fileID: 378174028046035411}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Death
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 3479431263810989529}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Death
+          m_BoolArgument: 0
+        m_CallState: 2
+  maxHealth: 2
+  currentHealth: 1
 --- !u!1 &3546224869068265737
 GameObject:
   m_ObjectHideFlags: 0
