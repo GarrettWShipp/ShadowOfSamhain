@@ -12,7 +12,7 @@ public class DeathMenu : MonoBehaviour
     {
         if (deathMenu != null)
         {
-            Time.timeScale = 0f;
+            //Time.timeScale = 0f;
             deathMenu.SetActive(true);
         }
     }
